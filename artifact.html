@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/@mdi/font@7.4.47/css/materialdesignicons.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vuetify/3.6.8/vuetify.min.css" integrity="sha512-zZcBgAmxmQ42Dj5ApDqyIW54A4E9s4Oc6wktdd2Ef0clfDijE4TECIt0cXp9p0EBfdyHBzECg9uMh9GZ9uGryQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+</head>
+
+<style>
+.v-card {
+  border: 1px solid grey;
+}
+
+.artifact-title {
+  font-family: "EB Garamond", serif;
+  letter-spacing: 0.2em !important;
+}
+</style>
+
+<body>
+
+<div id="app">
+  <v-app>
+
+      <v-app-bar color="primary" density="compact">
+        <template v-slot:prepend>
+          <v-app-bar-nav-icon></v-app-bar-nav-icon>
+        </template>
+        <v-app-bar-title><span class="text-h5">26 RCA Museum</span></v-app-bar-title>
+      </v-app-bar>
+
+     <v-main v-if="title">
+        <v-container>
+          <v-row>
+            <v-col cols="12" class="artifact-title text-center text-h5 font-weight-bold my-4">
+              {{ title }}
+            </v-col>
+          </v-row>
+          <v-row>
+            <v-col cols="12" class="artifact-title text-center text-h5 font-weight-bold my-4">
+              <audio controls :src="audio"></audio>
+            </v-col>
+          </v-row>
+
+          <v-row>
+            <v-col>
+                <v-card variant="outlined" elevation="16">
+                  <v-carousel height="auto">
+                    <v-carousel-item v-for="image in images" :src="image" eager cover></v-carousel-item>
+                  </v-carousel>
+                </v-card>
+              </v-col>
+          </v-row>
+          <v-row>
+            <v-col>
+              <v-card color="primary">
+                <v-card-text class="text-h5">
+                  {{ description }}
+                </v-card-text>
+              </v-card>
+            </v-col>
+          </v-row>
+       </v-container>
+     </v-main>
+  </v-app>
+</div>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/3.4.27/vue.global.prod.min.js" integrity="sha512-S6p3JDeFUUAPxDGXtffsMdW5aozN1Au8R+6Llg/3406JfPGc5618IXEJANXF3x1Ev5EGef+7z+sLbqYbIC6hDQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vuetify/3.6.8/vuetify.min.js" integrity="sha512-NytlC2r8yMLKVYSG6u5CyQFTPNskL8cnTPIlHZsu9GgtmhDokT/LeKF1stxkG59jQLLUhrDQ0GtSYaDGAc6YUg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.7.2/axios.min.js" integrity="sha512-JSCFHhKDilTRRXe9ak/FJ28dcpOJxzQaCd3Xg8MyF6XFjODhy/YMCM8HW0TFDckNHWUewW+kfvhin43hKtJxAw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+
+    const { createApp, ref } = Vue
+    const { createVuetify } = Vuetify
+    const vuetify = createVuetify({
+      theme: {
+        defaultTheme: 'light'
+      }
+    })
+
+  createApp({
+    data() {
+      return {
+        id: null,
+        title: null,
+        images: [],
+        description: null,
+        audio: null,
+        artifact: null,
+      }
+    },
+    computed: {},
+    methods: {},
+    mounted() {
+      let queryString = window.location.search;
+      let urlParams = new URLSearchParams(queryString);
+      if (urlParams.has('id')) {
+        this.id = urlParams.get('id');
+        this.audio = `/artifacts/${this.id}/audio.mp3`
+        axios.get(`/artifacts/${this.id}/data.json?nocache=${Math.floor(Math.random() * 1000000)}`)
+          .then(response => {
+            this.artifact = response.data;
+            this.title = response.data.title;
+            this.images = response.data.images;
+            this.description = response.data.description;
+          }
+        );
+      }
+    }
+  }).use(vuetify).mount('#app')
+</script>
+
+</body>
+</html>
