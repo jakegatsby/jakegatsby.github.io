@@ -10,18 +10,8 @@
 </head>
 
 <style>
-.v-application {
-  background: rgb(2,0,36) !important;
-  background: linear-gradient(30deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%) !important;
-}
-
 .v-card {
-  border: 1px solid #ccc;
-}
-
-.artifact-title {
-  font-family: "EB Garamond", serif;
-  letter-spacing: 0.2em !important;
+  border: 1px solid grey;
 }
 </style>
 
@@ -37,34 +27,12 @@
         <v-app-bar-title><span class="text-h5">26 RCA Museum</span></v-app-bar-title>
       </v-app-bar>
 
-     <v-main v-if="title">
+     <v-main>
         <v-container>
           <v-row>
             <v-col cols="12" class="artifact-title text-center text-h5 font-weight-bold my-4">
-              {{ title }}
-            </v-col>
-          </v-row>
-          <v-row>
-            <v-col cols="12" class="artifact-title text-center text-h5 font-weight-bold my-4">
-              <audio class="audio" controls :src="audio"></audio>
-            </v-col>
-          </v-row>
-
-          <v-row>
-            <v-col>
-                <v-card variant="outlined" elevation="16">
-                  <v-carousel height="auto">
-                    <v-carousel-item v-for="image in images" :src="image" eager cover></v-carousel-item>
-                  </v-carousel>
-                </v-card>
-              </v-col>
-          </v-row>
-          <v-row>
-            <v-col>
-              <v-card color="primary">
-                <v-card-text class="text-h5">
-                  {{ description }}
-                </v-card-text>
+              <v-card>
+                HOURS
               </v-card>
             </v-col>
           </v-row>
@@ -89,33 +57,11 @@
 
   createApp({
     data() {
-      return {
-        id: null,
-        title: null,
-        images: [],
-        description: null,
-        audio: null,
-        artifact: null,
-      }
+      return {}
     },
     computed: {},
     methods: {},
-    mounted() {
-      let queryString = window.location.search;
-      let urlParams = new URLSearchParams(queryString);
-      if (urlParams.has('id')) {
-        this.id = urlParams.get('id');
-        this.audio = `/artifacts/${this.id}/audio.mp3`
-        axios.get(`/artifacts/${this.id}/data.json?nocache=${Math.floor(Math.random() * 1000000)}`)
-          .then(response => {
-            this.artifact = response.data;
-            this.title = response.data.title;
-            this.images = response.data.images;
-            this.description = response.data.description;
-          }
-        );
-      }
-    }
+    mounted() {}
   }).use(vuetify).mount('#app')
 </script>
 
