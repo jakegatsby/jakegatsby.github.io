@@ -21,16 +21,16 @@
         <v-app-bar-title><span class="text-h5">26 RCA Museum</span></v-app-bar-title>
       </v-app-bar>
 
-     <v-main v-if="title">
+     <v-main v-if="artifact.title">
         <v-container>
           <v-row>
             <v-col cols="12" class="artifact-title text-center text-h4 font-weight-bold my-4">
-              {{ title }}
+              {{ artifact.title }}
             </v-col>
           </v-row>
           <v-row>
             <v-col cols="12" class="artifact-title text-center text-h5 font-weight-bold my-4">
-              <audio class="audio" controls :src="audio"></audio>
+              <audio class="audio" controls :src="artifact.audio"></audio>
             </v-col>
           </v-row>
 
@@ -38,7 +38,7 @@
             <v-col>
                 <v-card class="mb-6" variant="outlined" elevation="16">
                   <v-carousel height="auto">
-                    <v-carousel-item v-for="image in images" :src="image" eager cover></v-carousel-item>
+                    <v-carousel-item v-for="image in artifact.images" :src="image" eager cover></v-carousel-item>
                   </v-carousel>
                 </v-card>
               </v-col>
@@ -47,7 +47,7 @@
             <v-col>
               <v-card color="grey-darken-4">
                 <v-card-text class="text-h4">
-                  {{ description }}
+                  {{ artifact.description }}
                 </v-card-text>
               </v-card>
             </v-col>
@@ -74,12 +74,13 @@
   createApp({
     data() {
       return {
-        id: null,
-        title: null,
-        images: [],
-        description: null,
-        audio: null,
-        artifact: null,
+        artifact: {
+          id: null,
+          title: null,
+          images: [],
+          description: null,
+          audio: null
+        }
       }
     },
     computed: {},
@@ -88,14 +89,13 @@
       let queryString = window.location.search;
       let urlParams = new URLSearchParams(queryString);
       if (urlParams.has('id')) {
-        this.id = urlParams.get('id');
-        this.audio = `/artifacts/${this.id}/audio.mp3`
-        axios.get(`/artifacts/${this.id}/data.json?nocache=${Math.floor(Math.random() * 1000000)}`)
+        this.artifact.id = urlParams.get('id');
+        axios.get(`/artifacts/${this.artifact.id}/data.json?nocache=${Math.floor(Math.random() * 1000000)}`)
           .then(response => {
-            this.artifact = response.data;
-            this.title = response.data.title;
-            this.images = response.data.images;
-            this.description = response.data.description;
+            this.artifact.title = response.data.title;
+            this.artifact.images = response.data.images;
+            this.artifact.description = response.data.description;
+            this.artifact.audio = `/artifacts/${this.artifact.id}/audio.mp3`
           }
         );
       }
