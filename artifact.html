@@ -11,12 +11,12 @@
 
 <style>
 .v-application {
-  background: rgb(2,0,36) !important;
-  background: linear-gradient(30deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%) !important;
+  background: rgb(79,79,79);
+  background: linear-gradient(110deg, rgba(79,79,79,1) 35%, rgba(36,36,36,1) 100%);
 }
 
 .v-card {
-  border: 1px solid #ccc;
+  border: 1px solid #333;
 }
 
 .artifact-title {
@@ -30,7 +30,7 @@
 <div id="app">
   <v-app>
 
-      <v-app-bar color="blue-darken-4" density="compact">
+      <v-app-bar color="grey-darken-4" density="compact">
         <template v-slot:prepend>
           <v-app-bar-nav-icon></v-app-bar-nav-icon>
         </template>
@@ -61,7 +61,7 @@
           </v-row>
           <v-row>
             <v-col>
-              <v-card color="blue-darken-4">
+              <v-card color="grey-darken-4">
                 <v-card-text class="text-h4">
                   {{ description }}
                 </v-card-text>
