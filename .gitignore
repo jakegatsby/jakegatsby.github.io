@@ -1,2 +1,4 @@
 *.py[cod]
+*.mp3
+*.wav
 .mypy_cache/

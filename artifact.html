@@ -89,7 +89,7 @@
       let urlParams = new URLSearchParams(queryString);
       if (urlParams.has('id')) {
         this.id = urlParams.get('id');
-        this.audio = `/artifacts/${this.id}/audio.mp3`
+        this.audio = `/artifacts/${this.id}/audio.m4a`
         axios.get(`/artifacts/${this.id}/data.json?nocache=${Math.floor(Math.random() * 1000000)}`)
           .then(response => {
             this.artifact = response.data;
