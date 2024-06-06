@@ -6,21 +6,15 @@
   <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/@mdi/font@7.4.47/css/materialdesignicons.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vuetify/3.6.8/vuetify.min.css" integrity="sha512-zZcBgAmxmQ42Dj5ApDqyIW54A4E9s4Oc6wktdd2Ef0clfDijE4TECIt0cXp9p0EBfdyHBzECg9uMh9GZ9uGryQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="/custom.css" rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
 </head>
-
-<style>
-.v-card {
-  border: 1px solid grey;
-}
-</style>
-
 <body>
 
 <div id="app">
   <v-app>
 
-      <v-app-bar color="primary" density="compact">
+      <v-app-bar color="grey-darken-4" density="compact">
         <template v-slot:prepend>
           <v-app-bar-nav-icon></v-app-bar-nav-icon>
         </template>
@@ -32,7 +26,10 @@
           <v-row>
             <v-col cols="12" class="artifact-title text-center text-h5 font-weight-bold my-4">
               <v-card>
-                HOURS
+                <v-card-title>Hours</v-card-title>
+                <v-card-text>
+                  Tuesday: 10am to 8pm
+                </v-card-text>
               </v-card>
             </v-col>
           </v-row>
