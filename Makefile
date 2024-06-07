@@ -1,11 +1,10 @@
 
 
-
 .PHONY: serve
 serve:
 	python3 -m http.server --bind 0.0.0.0
 
 
-.PHONY: encode-audio
-encode-audio:
-	echo fdkaac -p5 -b64 audio.wav  # FIXME
+.PHONY: qr-encode
+qr-encode:
+	qrencode -t svg -l H -o artifacts/Quo2HooKeereish7uzoquoaz/qr-code.svg https://jakegatsby.github.io/artifact.html?id=Quo2HooKeereish7uzoquoaz
