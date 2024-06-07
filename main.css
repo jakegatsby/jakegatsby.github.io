@@ -1,0 +1,22 @@
+.v-application {
+  background: rgb(79,79,79);
+  background: linear-gradient(200deg, rgba(79,79,79,1) 35%, rgba(36,36,36,1) 100%);
+}
+
+.v-card {
+  border: 1px solid #333;
+}
+
+.artifact-title {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: bold;
+  font-style: normal;
+  letter-spacing: 0.2em !important;
+}
+
+.artifact-description {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
