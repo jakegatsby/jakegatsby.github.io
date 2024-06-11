@@ -1,8 +1,17 @@
 
+.PHONY: nuxt
+nuxt:
+	@echo select YARN as package manager
+	@echo
+	npx nuxi@latest init museum
+	cd museum && yarn
+	cd museum && yarn add -D vuetify vite-plugin-vuetify
+	cd museum && yarn add @mdi/font
+
 
 .PHONY: serve
 serve:
-	python3 -m http.server --bind 0.0.0.0
+	cd museum && yarn run dev
 
 
 .PHONY: qr-encode
