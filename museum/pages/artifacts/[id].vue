@@ -36,6 +36,8 @@
 
 <script setup>
 
+  import '~/assets/css/main.css'
+
 	import { ref, onMounted } from 'vue'
 	import { useRoute } from 'vue-router'
 
