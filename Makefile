@@ -1,22 +1,17 @@
 
-.PHONY: nuxt
-nuxt:
-	@echo select YARN as package manager
-	@echo
-	npx nuxi@latest init museum
-	cd museum && yarn
-	cd museum && yarn add -D vuetify vite-plugin-vuetify
-	cd museum && yarn add @mdi/font
+.PHONY: astro
+astro:
+	npm create astro@latest -- --template framework-vue
 
 
 .PHONY: serve
 serve:
-	cd museum && yarn run dev
+	cd .museum && npm run dev
 
 
 .PHONY: build
 build:
-	cd museum && npx nuxi generate
+	cd .museum && npx astro build
 
 
 .PHONY: qr-encode
