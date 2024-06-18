@@ -11,7 +11,7 @@ tailwind:
 
 .PHONY: serve
 serve:
-	cd .museum && npm run dev
+	cd .museum && npm run dev -- --host
 
 
 .PHONY: build
