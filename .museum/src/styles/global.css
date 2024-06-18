@@ -22,7 +22,11 @@
   background: transparent;
   border: 2px solid white;
 }
-/* fill-in selected dot */
+
 .flickity-page-dots .dot.is-selected {
   background: white;
+}
+
+.artifact-title {
+  text-align: center;
 }
