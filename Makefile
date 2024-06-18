@@ -4,6 +4,11 @@ astro:
 	npm create astro@latest -- --template framework-vue
 
 
+.PHONY: tailwind
+tailwind:
+	cd .museum && npx astro add tailwind
+
+
 .PHONY: serve
 serve:
 	cd .museum && npm run dev
