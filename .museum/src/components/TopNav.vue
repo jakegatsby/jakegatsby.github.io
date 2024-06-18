@@ -1,0 +1,15 @@
+<script setup>
+//
+</script>
+
+<template>
+  <nav class="container">
+    <ul>
+      <li><a class="contrast" href="#"><strong>26 RCA Museum</strong></a></li>
+    </ul>
+    <ul>
+      <li><a class="contrast" href="#">Artifacts</a></li>
+      <li><a class="contrast" href="#">About</a></li>
+    </ul>
+  </nav>
+</template>

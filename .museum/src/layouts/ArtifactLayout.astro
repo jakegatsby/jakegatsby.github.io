@@ -1,7 +1,8 @@
 ---
 import '../styles/global.css';
+import TopNav from '../components/TopNav.vue';
+import Carousel from '../components/Carousel.vue';
 const { frontmatter } = Astro.props;
-
 ---
 
 <!DOCTYPE html>
@@ -20,35 +21,18 @@ const { frontmatter } = Astro.props;
 
   <body>
     <header>
-      <nav class="container">
-        <ul>
-          <li><a class="contrast" href="#"><strong>26 RCA Museum</strong></a></li>
-        </ul>
-        <ul>
-          <li><a class="contrast" href="#">Artifacts</a></li>
-          <li><a class="contrast" href="#">About</a></li>
-        </ul>
-      </nav>
+      <TopNav />
     </header>
 
     <main id="content" class="container">
-        <div class="artifact-title">
-          <h3>{frontmatter.title}</h3>
-        </div>
+      <div class="artifact-title">
+        <h3>{frontmatter.title}</h3>
+      </div>
 
-        <div class="carousel"
-          data-flickity='{ "imagesLoaded": true, "percentPosition": false, "wrapAround": true, "pageDots": true, "prevNextButtons": false }'>
-          <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/orange-tree.jpg" alt="orange tree" />
-          <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/submerged.jpg" alt="submerged" />
-          <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/look-out.jpg" alt="look-out" />
-          <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/one-world-trade.jpg" alt="One World Trade" />
-          <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/drizzle.jpg" alt="drizzle" />
-          <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/cat-nose.jpg" alt="cat nose" />
-        </div>
+      <Carousel />
 
-        <div>
-          <slot />
-        </div>
+      <div>
+        <slot />
       </div>
     </main>
   </body>
