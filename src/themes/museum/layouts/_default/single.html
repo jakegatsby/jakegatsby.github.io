@@ -3,13 +3,13 @@
         <h3>{{ .Title }}</h3>
       </div>
 
+      {{ with .Resources.ByType "image" }}
       <div class="carousel" data-flickity='{ "imagesLoaded": true, "percentPosition": false, "wrapAround": true, "pageDots": true, "prevNextButtons": true }'>
-{{ with .Resources.ByType "image" }}
-{{ range . }}
+        {{ range . }}
         <img src="{{ .Permalink }}" alt="alt">
-{{ end }}
-{{ end }}
+        {{ end }}
       </div>
+      {{ end }}
 
       <div>
          {{ .Content }}
