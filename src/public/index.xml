@@ -9,11 +9,11 @@
     <lastBuildDate>Wed, 19 Jun 2024 11:35:58 -0400</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Foo</title>
-      <link>http://localhost:1313/posts/foo/</link>
+      <title>D-Day From MD</title>
+      <link>http://localhost:1313/artifacts/foo/</link>
       <pubDate>Wed, 19 Jun 2024 11:35:58 -0400</pubDate>
-      <guid>http://localhost:1313/posts/foo/</guid>
-      <description>TEST asdfljasdfjsdlkjf</description>
+      <guid>http://localhost:1313/artifacts/foo/</guid>
+      <description>asdfljasdfjsdlkjf</description>
     </item>
     <item>
       <title>Post 3</title>

@@ -2,6 +2,15 @@
       <div class="artifact-title">
         <h3>{{ .Title }}</h3>
       </div>
+
+      <div class="carousel" data-flickity='{ "imagesLoaded": true, "percentPosition": false, "wrapAround": true, "pageDots": true, "prevNextButtons": true }'>
+{{ with .Resources.ByType "image" }}
+{{ range . }}
+        <img src="{{ .Permalink }}" alt="alt">
+{{ end }}
+{{ end }}
+      </div>
+
       <div>
          {{ .Content }}
       </div>
