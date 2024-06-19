@@ -3,6 +3,7 @@ import '../styles/global.css';
 import TopNav from '../components/TopNav.vue';
 import Carousel from '../components/Carousel.vue';
 const { frontmatter } = Astro.props;
+const artifact = Astro.url.pathname.split('/').at(-1);
 ---
 
 <!DOCTYPE html>
@@ -29,7 +30,7 @@ const { frontmatter } = Astro.props;
         <h3>{frontmatter.title}</h3>
       </div>
 
-      <Carousel />
+      <Carousel client:only="vue" artifact={artifact} />
 
       <div>
         <slot />

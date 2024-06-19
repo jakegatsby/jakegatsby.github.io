@@ -1,6 +1,6 @@
 <script setup>
-  // import { ref, defineProps } from 'vue';
-  // const props = defineProps(['title']);
+  import { ref, defineProps } from 'vue';
+  const props = defineProps(['artifact']);
 </script>
 
 <template>
