@@ -3,6 +3,15 @@
         <h3>{{ .Title }}</h3>
       </div>
 
+      {{ with .Resources.ByType "audio" }}
+      <div style="text-align: center">
+        {{ range . }}
+        <audio class="audio" controls src="{{ .Permalink }}"></audio>
+        {{ end }}
+      </div>
+      {{ end }}
+
+
       {{ with .Resources.ByType "image" }}
       <div class="carousel" data-flickity='{ "imagesLoaded": true, "percentPosition": false, "wrapAround": true, "pageDots": true, "prevNextButtons": true }'>
         {{ range . }}
