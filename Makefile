@@ -1,22 +1,11 @@
-
-.PHONY: astro
-astro:
-	npm create astro@latest -- --template framework-vue
-
-
-.PHONY: tailwind
-tailwind:
-	cd .museum && npx astro add tailwind
-
-
 .PHONY: serve
 serve:
-	cd .museum && npm run dev -- --host
+	cd src && hugo server -D
 
 
 .PHONY: build
 build:
-	cd .museum && npx astro build
+	cd src && hugo -d ../
 
 
 .PHONY: qr-encode

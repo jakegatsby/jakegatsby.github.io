@@ -1,22 +1,32 @@
-body {
-  color: #222;
-  font-family: sans-serif;
-  line-height: 1.5;
-  margin: 1rem;
-  max-width: 768px;
+.carousel {
+  background: #EEE;
+  margin-top: 3em;
+  margin-bottom: 3em;
 }
 
-header {
-  border-bottom: 1px solid #222;
-  margin-bottom: 1rem;
+.carousel img {
+  display: block;
+  height: 300px;
 }
 
-footer {
-  border-top: 1px solid #222;
-  margin-top: 1rem;
+@media screen and ( min-width: 768px ) {
+  .carousel img {
+    height: 400px;
+  }
 }
 
-a {
-  color: #00e;
-  text-decoration: none;
+.flickity-page-dots .dot {
+  width: 12px;
+  height: 12px;
+  opacity: 1;
+  background: transparent;
+  border: 2px solid white;
+}
+
+.flickity-page-dots .dot.is-selected {
+  background: white;
+}
+
+.artifact-title {
+  text-align: center;
 }
