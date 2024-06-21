@@ -1,6 +1,6 @@
 .PHONY: serve
 serve:
-	cd src && hugo server -D --disableFastRender
+	cd src && hugo server -D --disableFastRender --bind 0.0.0.0
 
 
 .PHONY: build
