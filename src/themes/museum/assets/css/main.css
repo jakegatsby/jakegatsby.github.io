@@ -1,3 +1,12 @@
+nav.container {
+  padding-bottom: 0.5em;
+  border-bottom: 1px solid #333;
+  font-family: "Lora", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
 .carousel {
   background: #EEE;
   margin-top: 3em;
@@ -27,7 +36,17 @@
   background: white;
 }
 
-.artifact-title {
+.artifact-title-container {
   text-align: center;
   margin-bottom: 3em;
 }
+
+.artifact-title {
+  font-family: "Lora", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+
+}
+
+

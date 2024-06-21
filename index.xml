@@ -6,21 +6,20 @@
     <description>Recent content on 26 RCA Museum</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 19 Jun 2024 11:35:58 -0400</lastBuildDate>
     <atom:link href="https://jakegatsby.github.io/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>World War II</title>
-      <link>https://jakegatsby.github.io/artifacts/ww2/</link>
-      <pubDate>Wed, 19 Jun 2024 11:35:58 -0400</pubDate>
-      <guid>https://jakegatsby.github.io/artifacts/ww2/</guid>
-      <description>In 1939, Germany invaded Poland. This started more than six years of bitter fighting in the Second World War, which finally ended in 1945. More than one million Canadians and Newfoundlanders served in uniform, both here at home and around the world. Over 45,000 of our brave men and women in uniform gave their lives and another 55,000 were wounded.</description>
-    </item>
     <item>
       <title>Bar Test</title>
       <link>https://jakegatsby.github.io/artifacts/bar/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://jakegatsby.github.io/artifacts/bar/</guid>
       <description>Bar 123 123 123</description>
+    </item>
+    <item>
+      <title>World War II</title>
+      <link>https://jakegatsby.github.io/artifacts/ww2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://jakegatsby.github.io/artifacts/ww2/</guid>
+      <description>In 1939, Germany invaded Poland. This started more than six years of bitter fighting in the Second World War, which finally ended in 1945. More than one million Canadians and Newfoundlanders served in uniform, both here at home and around the world. Over 45,000 of our brave men and women in uniform gave their lives and another 55,000 were wounded.</description>
     </item>
   </channel>
 </rss>

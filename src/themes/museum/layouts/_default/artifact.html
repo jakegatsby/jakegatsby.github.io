@@ -1,6 +1,6 @@
 {{ define "main" }}
-      <div class="artifact-title">
-        <h3>{{ .Title }}</h3>
+      <div class="artifact-title-container">
+        <h3 class="artifact-title">{{ .Title }}</h3>
       </div>
 
       {{ with .Resources.ByType "audio" }}
