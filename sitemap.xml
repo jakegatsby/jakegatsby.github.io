@@ -3,14 +3,20 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://jakegatsby.github.io/</loc>
+    <lastmod>2023-06-22T10:09:04-04:00</lastmod>
+  </url><url>
+    <loc>https://jakegatsby.github.io/news/</loc>
+    <lastmod>2023-06-22T10:09:04-04:00</lastmod>
+  </url><url>
+    <loc>https://jakegatsby.github.io/about/</loc>
   </url><url>
     <loc>https://jakegatsby.github.io/artifacts/</loc>
-  </url><url>
-    <loc>https://jakegatsby.github.io/artifacts/bar/</loc>
   </url><url>
     <loc>https://jakegatsby.github.io/categories/</loc>
   </url><url>
     <loc>https://jakegatsby.github.io/tags/</loc>
+  </url><url>
+    <loc>https://jakegatsby.github.io/artifacts/vimy/</loc>
   </url><url>
     <loc>https://jakegatsby.github.io/artifacts/ww2/</loc>
   </url>

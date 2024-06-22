@@ -6,13 +6,21 @@
     <description>Recent content on 26 RCA Museum</description>
     <generator>Hugo</generator>
     <language>en-us</language>
+    <lastBuildDate>Mon, 01 Jan 0001 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://jakegatsby.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Bar Test</title>
-      <link>https://jakegatsby.github.io/artifacts/bar/</link>
+      <title>About</title>
+      <link>https://jakegatsby.github.io/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://jakegatsby.github.io/artifacts/bar/</guid>
-      <description>Bar 123 123 123</description>
+      <guid>https://jakegatsby.github.io/about/</guid>
+      <description>lsdkfjldsfjk</description>
+    </item>
+    <item>
+      <title>Vimy Ridge</title>
+      <link>https://jakegatsby.github.io/artifacts/vimy/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://jakegatsby.github.io/artifacts/vimy/</guid>
+      <description>The Battle of Vimy Ridge was part of the Battle of Arras, in the Pas-de-Calais department of France, during the First World War. The main combatants were the four divisions of the Canadian Corps in the First Army, against three divisions of the German 6th Army. The battle occurred from 9 to 12 April 1917, marking the commencement of the Battle of Arras and serving as the inaugural assault of the Nivelle Offensive.</description>
     </item>
     <item>
       <title>World War II</title>
