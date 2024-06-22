@@ -14,13 +14,15 @@ a.nav-item-primary {
   font-weight: 700;
 }
 
-nav details.dropdown summary::after {
-  content: none !important;
+nav details.dropdown  {
+  background: none;
+  border: none;
 }
 
 summary.hamburger-icon {
   color: #ddd !important;
-  font-weight: 800;
+  background: none !important;
+  border: none !important;
 }
 
 .carousel {
