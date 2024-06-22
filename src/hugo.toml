@@ -2,3 +2,4 @@ baseURL = 'https://jakegatsby.github.io/'
 languageCode = 'en-us'
 title = '26 RCA Museum'
 theme = 'museum'
+summaryLength = 10

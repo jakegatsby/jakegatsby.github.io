@@ -49,13 +49,18 @@ a.nav-item-primary {
   margin-bottom: 3em;
 }
 
+.page-list-preamble {
+  text-align: center;
+  margin-bottom: 3em;
+}
+
 
 .page-title-container {
   text-align: center;
   margin-bottom: 3em;
 }
 
-.page-title {
+.page-title, .page-list-link {
   font-family: "Lora", serif;
   font-optical-sizing: auto;
   font-weight: 700;

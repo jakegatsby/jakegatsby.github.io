@@ -5,6 +5,7 @@ serve:
 
 .PHONY: build
 build:
+	if grep -q draft src/content; then echo "Remove draft" && exit 1; fi
 	rm artifacts/ news/ categories/ css/ favicon.ico index.* sitemap.xml tags/ -r
 	cd src && hugo -d ../
 
