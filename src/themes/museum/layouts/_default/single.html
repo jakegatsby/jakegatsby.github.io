@@ -1,9 +1,26 @@
 {{ define "main" }}
-  <h1>{{ .Title }}</h1>
+      <div class="page-title-container">
+        <h2 class="page-title">{{ .Title }}</h2>
+      </div>
 
-  {{ $dateMachine := .Date | time.Format "2006-01-02T15:04:05-07:00" }}
-  {{ $dateHuman := .Date | time.Format ":date_long" }}
-  <time datetime="{{ $dateMachine }}">{{ $dateHuman }}</time>
+      {{ with .Resources.ByType "audio" }}
+      <div style="text-align: center">
+        {{ range . }}
+        <audio class="audio" controls src="{{ .Permalink }}"></audio>
+        {{ end }}
+      </div>
+      {{ end }}
 
-  {{ .Content }}
+
+      {{ with .Resources.ByType "image" }}
+      <div class="carousel" data-flickity='{ "imagesLoaded": true, "percentPosition": false, "wrapAround": true, "pageDots": true, "prevNextButtons": true }'>
+        {{ range . }}
+        <img src="{{ .RelPermalink }}" alt="alt">
+        {{ end }}
+      </div>
+      {{ end }}
+
+      <div class="page-description">
+         {{ .Content }}
+      </div>
 {{ end }}

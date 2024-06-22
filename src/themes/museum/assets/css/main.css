@@ -44,18 +44,24 @@ a.nav-item-primary {
   background: white;
 }
 
-.artifact-title-container {
+
+.page-list-container {
+  margin-bottom: 3em;
+}
+
+
+.page-title-container {
   text-align: center;
   margin-bottom: 3em;
 }
 
-.artifact-title {
+.page-title {
   font-family: "Lora", serif;
   font-optical-sizing: auto;
   font-weight: 700;
   font-style: normal;
 }
 
-.artifact-description {
+.page-description {
   font-size: 1.5em;
 }
