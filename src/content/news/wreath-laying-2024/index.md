@@ -1,7 +1,6 @@
 +++
 title = 'Wreath Laying 2023'
 date = 2023-06-22T10:09:04-04:00
-draft = true
 +++
 
 The 2023 Wreaths Across Canada ceremony will be held on Sunday, December 10th 2023 at 1:30 PM in Section 27!

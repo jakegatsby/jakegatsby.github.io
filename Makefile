@@ -5,7 +5,7 @@ serve:
 
 .PHONY: build
 build:
-	rm artifacts/ categories/ css/ favicon.ico index.* sitemap.xml tags/ -r
+	rm artifacts/ news/ categories/ css/ favicon.ico index.* sitemap.xml tags/ -r
 	cd src && hugo -d ../
 
 
