@@ -19,7 +19,6 @@ nav.container, .site-title-container {
   text-decoration: none;
 }
 
-
 nav.container {
   border-bottom: 1px solid #333;
 }
@@ -65,7 +64,6 @@ a.nav-item-primary {
   background: white;
 }
 
-
 .page-list-container {
   margin-bottom: 3em;
 }
@@ -74,7 +72,6 @@ a.nav-item-primary {
   text-align: center;
   margin-bottom: 3em;
 }
-
 
 .page-title-container {
   text-align: center;
