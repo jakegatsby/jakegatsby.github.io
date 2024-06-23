@@ -1,6 +1,20 @@
-nav.container {
+nav.container, .site-title-container {
   padding-bottom: 0.5em;
-  border-bottom: 1px solid #333;}
+}
+
+.site-title-container {
+  text-align: center;
+}
+
+.site-title-container a {
+  font-size: 1.2em;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+nav.container {
+  border-bottom: 1px solid #333;
+}
 
 a.nav-item {
   font-family: "Lora", serif;
@@ -12,29 +26,6 @@ a.nav-item {
 
 a.nav-item-primary {
   font-weight: 700;
-}
-
-nav details.dropdown  {
-  background: none;
-  border: none;
-}
-
-nav summary.dropdown-title {
-  color: #ddd !important;
-  background: none !important;
-  border: none !important;
-  font-family: "Lora", serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
-}
-
-
-nav a.dropdown-item {
-  font-family: "Lora", serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
 }
 
 .carousel {
