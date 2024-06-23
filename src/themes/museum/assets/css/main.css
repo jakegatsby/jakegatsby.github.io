@@ -19,10 +19,22 @@ nav details.dropdown  {
   border: none;
 }
 
-summary.hamburger-icon {
+nav summary.dropdown-title {
   color: #ddd !important;
   background: none !important;
   border: none !important;
+  font-family: "Lora", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+nav a.dropdown-item {
+  font-family: "Lora", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .carousel {
