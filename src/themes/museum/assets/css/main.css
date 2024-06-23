@@ -6,11 +6,16 @@ nav.container, .site-title-container {
   text-align: center;
 }
 
-.site-title-container a {
+.site-title-line {
   font-size: 1.3em;
   font-weight: 700;
+  margin: 0px;
+}
+
+.site-title-link {
   text-decoration: none;
 }
+
 
 nav.container {
   border-bottom: 1px solid #333;
