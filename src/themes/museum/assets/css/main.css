@@ -7,6 +7,9 @@ nav.container, .site-title-container {
 }
 
 .site-title-line {
+  font-family: "Lora", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
   font-size: 1.3em;
   font-weight: 700;
   margin: 0px;
