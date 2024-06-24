@@ -1,5 +1,9 @@
+html, body {
+  font-size: 100% !important;
+}
+
 nav.container, .site-title-container {
-  padding-bottom: 0.5em;
+  padding-bottom: 0.5rem;
 }
 
 .site-title-container {
@@ -10,7 +14,7 @@ nav.container, .site-title-container {
   font-family: "Lora", serif;
   font-optical-sizing: auto;
   font-style: normal;
-  font-size: 1.6em;
+  font-size: 1.6rem;
   font-weight: 700;
   margin: 0px;
 }
@@ -19,7 +23,7 @@ nav.container, .site-title-container {
   font-family: "Lora", serif;
   font-optical-sizing: auto;
   font-style: normal;
-  font-size: 1.1em;
+  font-size: 1.1rem !important;
   margin: 0px;
 }
 
@@ -37,7 +41,7 @@ a.nav-item {
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
-  font-size: 1.1em;
+  font-size: 1.1rem;
 }
 
 a.nav-item-primary {
@@ -46,8 +50,8 @@ a.nav-item-primary {
 
 .carousel {
   background: #EEE;
-  margin-top: 3em;
-  margin-bottom: 3em;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
 }
 
 .carousel img {
@@ -74,17 +78,17 @@ a.nav-item-primary {
 }
 
 .page-list-container {
-  margin-bottom: 3em;
+  margin-bottom: 3rem;
 }
 
 .page-list-preamble {
   text-align: center;
-  margin-bottom: 3em;
+  margin-bottom: 3rem;
 }
 
 .page-title-container {
   text-align: center;
-  margin-bottom: 3em;
+  margin-bottom: 3rem;
 }
 
 .page-title, .page-list-link {
@@ -95,5 +99,5 @@ a.nav-item-primary {
 }
 
 .page-description {
-  font-size: 1.5em;
+  font-size: 1.5rem;
 }
