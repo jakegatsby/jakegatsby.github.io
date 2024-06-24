@@ -115,6 +115,18 @@ span.material-symbols-outlined {
   margin-bottom: 2rem;
 }
 
+@media screen and ( min-width: 768px ) {
+  .contact-items-container {
+    text-align: center;
+  }
+}
+
 .contact-item {
+  font-size: 1.4rem;
   margin-bottom: 1rem;
+}
+
+.contact-item > .material-symbols-outlined {
+  vertical-align: bottom;
+  padding-bottom: 0.15em
 }
