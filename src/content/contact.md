@@ -1,9 +1,6 @@
 +++
 title = 'Contact'
+layout = 'contact'
 +++
-
-
-Contact Page - TODO
-
 
 

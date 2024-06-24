@@ -106,3 +106,15 @@ a.nav-item-primary {
 .page-description {
   font-size: 1.5rem;
 }
+
+span.material-symbols-outlined {
+  margin-right: 1rem;
+}
+
+.contact-items-container {
+  margin-bottom: 2rem;
+}
+
+.contact-item {
+  margin-bottom: 1rem;
+}
