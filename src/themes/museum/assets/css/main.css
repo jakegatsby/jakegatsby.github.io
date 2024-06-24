@@ -98,11 +98,7 @@ a.nav-item-primary {
   font-style: normal;
 }
 
-.page-subtitle {
-  font-family: "Lora", serif;
-  font-optical-sizing: auto;
-  font-weight: 700;
-  font-style: normal;
+.page-title {
   padding: 0px;
   margin: 0px;
 }
