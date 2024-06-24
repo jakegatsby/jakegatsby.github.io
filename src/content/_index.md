@@ -1,9 +1,7 @@
 +++
-title = 'Contact'
+title = 'Regimental Museum'
 +++
 
 
-Contact Page - TODO
-
-
+Home Page TODO
 
