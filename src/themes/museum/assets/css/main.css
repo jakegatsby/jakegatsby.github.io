@@ -2,6 +2,11 @@ html, body {
   font-size: 100% !important;
 }
 
+#content {
+  margin-bottom: 2rem;
+  border-bottom: 1px solid #555;
+}
+
 nav.container, .site-title-container {
   padding-bottom: 0.5rem;
 }
@@ -33,13 +38,14 @@ nav.container, .site-title-container {
 }
 
 nav.container {
-  border-bottom: 1px solid #333;
+  border-bottom: 1px solid #555;
 }
 
 a.nav-item {
+  color: #eee;
   font-family: "Lora", serif;
   font-optical-sizing: auto;
-  font-weight: 400;
+  font-weight: 700;
   font-style: normal;
   font-size: 1.1rem;
 }
@@ -107,26 +113,13 @@ a.nav-item-primary {
   font-size: 1.5rem;
 }
 
+.footer-item-title {
+  color: #eee;
+  font-weight: 700;
+}
+
 span.material-symbols-outlined {
-  margin-right: 1rem;
-}
-
-.contact-items-container {
-  margin-bottom: 2rem;
-}
-
-@media screen and ( min-width: 768px ) {
-  .contact-items-container {
-    text-align: center;
-  }
-}
-
-.contact-item {
-  font-size: 1.4rem;
-  margin-bottom: 1rem;
-}
-
-.contact-item > .material-symbols-outlined {
   vertical-align: bottom;
-  padding-bottom: 0.15em
+  padding-bottom: 0.1em;
+  margin-right: 0.5rem;
 }
