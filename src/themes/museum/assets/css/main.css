@@ -3,7 +3,7 @@ html, body {
 }
 
 #content {
-  margin-bottom: 2rem;
+  margin-bottom: 0px;
   border-bottom: 1px solid #555;
 }
 
@@ -114,14 +114,26 @@ a.nav-item-primary {
 }
 
 /* https://griddy.io/ */
-.footer-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-column-gap: 0px;
-    grid-row-gap: 2rem;
-    justify-items: stretch;
-    align-items: stretch;
- }
+.container > .footer-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 5%;
+  grid-row-gap: 2rem;
+  justify-items: stretch;
+  align-items: stretch;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid #555;
+}
+
+.footer-category {
+  text-align: center;
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: #eee;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
 
 .footer-item-title {
   color: #eee;
