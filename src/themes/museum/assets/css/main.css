@@ -113,6 +113,16 @@ a.nav-item-primary {
   font-size: 1.5rem;
 }
 
+/* https://griddy.io/ */
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 2rem;
+    justify-items: stretch;
+    align-items: stretch;
+ }
+
 .footer-item-title {
   color: #eee;
   font-weight: 700;
