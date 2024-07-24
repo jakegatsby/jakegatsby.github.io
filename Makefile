@@ -12,6 +12,6 @@ build:
 
 .PHONY: qr-encode
 qr-encode:
-	qrencode -t svg -l H -o artifacts/Quo2HooKeereish7uzoquoaz/qr-code.svg https://jakegatsby.github.io/artifact.html?id=Quo2HooKeereish7uzoquoaz
-
+	qrencode -t svg -l H -o jakegatsby.github.io.svg https://jakegatsby.github.io/
+	qrencode -t png -l H -s 10 -o jakegatsby.github.io.png https://jakegatsby.github.io/
 
