@@ -1,12 +1,16 @@
 .PHONY: serve
 serve:
-	cd src && hugo server -D --disableFastRender --bind 0.0.0.0
+	cd src && rm public/ -rf && hugo server --debug -D --disableFastRender --bind 0.0.0.0
 
+
+.PHONY: clean
+clean:
+	rm about/ displays/ artifacts/ categories/ contact/ css/ news/ tags/ favicon.ico index.* sitemap.xml -rf
 
 .PHONY: build
 build:
 	if grep -q draft src/content; then echo "Remove draft" && exit 1; fi
-	rm about/ artifacts/ categories/ contact/ css/ news/ tags/ favicon.ico index.* sitemap.xml -rf
+
 	cd src && hugo -d ../
 
 
