@@ -1,0 +1,21 @@
+{{ define "main" }}
+
+  <div class="page-title-container">
+    <h2 class="page-title">XII Manitoba Dragoons &</h2>
+    <h2 class="page-title">26th Field Regiment Museum</h2>
+  </div>
+
+  {{ with .Resources.ByType "image" }}
+  <div class="carousel" data-flickity='{ "imagesLoaded": true, "percentPosition": false, "wrapAround": true, "pageDots": true, "prevNextButtons": true }'>
+    {{ range . }}
+    <img src="{{ .RelPermalink }}" alt="alt">
+    {{ end }}
+  </div>
+  {{ end }}
+
+  <div class="page-description">
+     {{ .Content }}
+  </div>
+
+
+{{ end }}
