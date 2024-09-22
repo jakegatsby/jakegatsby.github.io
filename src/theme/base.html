@@ -20,7 +20,7 @@
     <details>
       <summary role="button">Artifacts</summary>
     {% for artifact in page | get_artifacts %}
-      <div><a href="{{ artifact.url }}">artifact.title</a></div>
+      <div><a href="{{ artifact.url }}">{{ artifact.title }}</a></div>
     {% endfor %}
     </details>
     {% endif %}

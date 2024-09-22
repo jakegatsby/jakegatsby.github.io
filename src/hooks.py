@@ -1,4 +1,3 @@
-import re
 import os
 from pathlib import Path
 
@@ -9,7 +8,9 @@ IMAGE_SUFFIXES = [
   ".jpeg",
 ]
 
-BASEDIR = Path(".") / "docs"
+def on_config(config):
+  global BASEDIR
+  BASEDIR = Path(config["docs_dir"])
 
 
 def is_display(page):
@@ -19,6 +20,7 @@ def is_display(page):
 def is_artifact(page):
 	return Path(page.url).parent.name == "artifacts"
 	
+	
 # FIXME return url, title, parent display
 def get_artifacts(page):
   artifacts = []
@@ -26,8 +28,8 @@ def get_artifacts(page):
     index_data = (artifact_dir / "index.md").read_text(encoding="utf-8")
     md = markdown.Markdown(extensions=['meta'])
     md.convert(index_data)
-    title = md.Meta["title"]
-    url = str(Path(*artifact_dir.parts[2:]))
+    title = md.Meta["title"][0]
+    url = str(artifact_dir).replace(str(BASEDIR), "") + "/"
     artifacts.append({
       "title": title,
       "url": url

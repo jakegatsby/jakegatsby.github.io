@@ -1,5 +1,5 @@
 ---
-title: Vimy Ridge Display
+title: Vimy Ridge
 ---
 
 The Battle of Vimy Ridge was part of the Battle of Arras, in the Pas-de-Calais department of France, during the First World War. The main combatants were the four divisions of the Canadian Corps in the First Army, against three divisions of the German 6th Army. The battle occurred from 9 to 12 April 1917, marking the commencement of the Battle of Arras and serving as the inaugural assault of the Nivelle Offensive. The objective was to draw German reserves away from the French forces, preparing for a crucial offensive along the Aisne and the Chemin des Dames ridge several days later.
