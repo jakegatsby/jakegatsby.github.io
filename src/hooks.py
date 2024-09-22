@@ -16,26 +16,32 @@ def on_config(config):
 def is_display(page):
 	return Path(page.url).parent.name == "displays"
 
+def is_artifact(page):  
+  return Path(page.url).parent.name == "artifacts"
+  
+def get_page_title(page=None, page_dir=None):
+  if page_dir:
+    index_data = (page_dir / "index.md").read_text(encoding="utf-8")
+  md = markdown.Markdown(extensions=['meta'])
+  md.convert(index_data)
+  return md.Meta["title"][0]
+  
 
-def is_artifact(page):
-	return Path(page.url).parent.name == "artifacts"
+def get_display(page):  
+  return {
+    "title": get_page_title(page_dir=Path(page.file.abs_src_path).parent.parent.parent),
+    "url": "/" + str(Path(page.url).parent.parent) + "/"
+  }
 	
-	
-# FIXME return url, title, parent display
 def get_artifacts(page):
   artifacts = []
   for artifact_dir in (BASEDIR / Path(page.url) / "artifacts").glob("*"):
-    index_data = (artifact_dir / "index.md").read_text(encoding="utf-8")
-    md = markdown.Markdown(extensions=['meta'])
-    md.convert(index_data)
-    title = md.Meta["title"][0]
     url = str(artifact_dir).replace(str(BASEDIR), "") + "/"
+    title = get_page_title(page_dir=artifact_dir)
     artifacts.append({
       "title": title,
-      "url": url
-    })
-    
-  print("XXXXXXXXXXXXXXXXXXX", artifacts)
+      "url": url,
+    })   
   return artifacts
 
 
@@ -47,5 +53,6 @@ def on_env(env, config, files):
   env.filters["images"] = images
   env.filters["is_display"] = is_display
   env.filters["is_artifact"] = is_artifact
+  env.filters["get_display"] = get_display  
   env.filters["get_artifacts"] = get_artifacts
   return env

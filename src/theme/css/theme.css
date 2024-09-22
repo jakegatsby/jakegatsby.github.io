@@ -99,6 +99,11 @@ a.nav-item-primary {
 .page-title {
   padding: 0px;
   margin: 0px;
+  text-decoration: none;
+}
+
+.breadcrumb-link {
+  text-decoration: none;
 }
 
 .page-description > p {
@@ -106,31 +111,15 @@ a.nav-item-primary {
   color: #eee;
 }
 
-/* https://griddy.io/ */
-.container > .footer-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-column-gap: 5%;
-  grid-row-gap: 2rem;
-  justify-items: stretch;
-  align-items: stretch;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
-  border-bottom: 1px solid #555;
+.artifacts-button-label {
+  font-size: 1.5rem;
 }
 
-.footer-category {
-  text-align: center;
-  font-weight: 700;
-  font-size: 1.2rem;
+.artifact-button {
+  font-size: 1.5rem;
+  text-decoration: none;
   color: #eee;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-}
-
-.footer-item-title {
-  color: #eee;
-  font-weight: 700;
+  margin-right: 1rem;
 }
 
 span.material-symbols-outlined {

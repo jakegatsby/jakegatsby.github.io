@@ -12,20 +12,19 @@
 <body>
   <main id="content" class="container">
 
+    {% if page | is_display %}
     <div class="page-title-container">
       <h2 class="page-title">{{ page.meta.title }}</h2>
     </div>
-    
-    {% if page | is_display %}
-    <details>
-      <summary role="button">Artifacts</summary>
     {% for artifact in page | get_artifacts %}
-      <div><a href="{{ artifact.url }}">{{ artifact.title }}</a></div>
+    <a href="{{ artifact.url }}" class="artifact-button" role="button">{{ artifact.title }}</a>
     {% endfor %}
-    </details>
     {% endif %}
 
     {% if page | is_artifact %}
+    <div class="page-title-container">
+      <h2 class="page-title"><a class="breadcrumb-link" href="{{ (page | get_display).url }}">{{ (page | get_display).title }}</a> > {{ page.meta.title }}</h2>
+    </div>
     {% endif %}
 
 
@@ -37,9 +36,12 @@
     </div>
     {% endif %}
 
+    <div class="page-description">
     {% block content %}
     {{ page.content }}
     {% endblock %}
+    </div>
+    
   </main>
 </body>
 </html
