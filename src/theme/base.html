@@ -21,9 +21,14 @@
     <div class="page-title-container">
       <h2 class="page-title">{{ page.meta.title }}</h2>
     </div>
-    {% for artifact in page | get_artifacts %}
-    <a href="{{ artifact.url }}" class="artifact-button" role="button">{{ artifact.title }}</a>
-    {% endfor %}
+
+    <details>
+      <summary class="artifacts-dropdown-title">Artifacts</summary>
+      {% for artifact in page | get_artifacts %}
+      <div><a href="{{ artifact.url }}" class="artifact-button" role="button">{{ artifact.title }}</a></div>
+      {% endfor %}
+    </details>
+
     {% endif %}
 
     {% if page | is_artifact %}

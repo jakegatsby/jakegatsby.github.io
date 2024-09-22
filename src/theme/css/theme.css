@@ -111,15 +111,18 @@ a.nav-item-primary {
   color: #eee;
 }
 
-.artifacts-button-label {
+.artifacts-dropdown-title {
   font-size: 1.5rem;
+  padding-bottom: 1rem;
 }
 
 .artifact-button {
-  font-size: 1.5rem;
+  display: block;
+  font-size: 1.2rem;
   text-decoration: none;
   color: #eee;
-  margin-right: 1rem;
+  margin-bottom: 1rem;
+  width: 100%
 }
 
 span.material-symbols-outlined {
