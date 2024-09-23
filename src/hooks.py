@@ -45,12 +45,17 @@ def get_artifacts(page):
   return artifacts
 
 
-def images(page):	
+def get_audio(page):
+  return "audio.mp3" if (BASEDIR / page.url / "audio.mp3").exists() else None
+
+
+def get_images(page):	
   return [p.name for p in (BASEDIR / page.url).glob("*") if p.suffix in IMAGE_SUFFIXES]
 
 
 def on_env(env, config, files):
-  env.filters["images"] = images
+  env.filters["get_audio"] = get_audio
+  env.filters["get_images"] = get_images
   env.filters["is_display"] = is_display
   env.filters["is_artifact"] = is_artifact
   env.filters["get_display"] = get_display  
