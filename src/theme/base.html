@@ -36,8 +36,9 @@
     {% endif %}
 
     {% if page | is_artifact %}
-    <div class="page-title-container">
-      <h2 class="page-title"><a class="breadcrumb-link" href="{{ (page | get_display).url }}">{{ (page | get_display).title }}</a> > {{ page.meta.title }}</h2>
+    <div class="page-title-container">      
+      <h2 class="page-title">{{ page.meta.title }}</h2>
+      <h5 class="page-title"><a class="breadcrumb-link" href="{{ (page | get_display).url }}">{{ (page | get_display).title }}</a></h5>
     </div>
     {% endif %}
 

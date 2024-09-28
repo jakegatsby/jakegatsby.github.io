@@ -42,7 +42,7 @@ def get_artifacts(page):
       "title": title,
       "url": url,
     })   
-  return artifacts
+  return sorted(artifacts, key=lambda a: a["url"])
 
 
 def get_audio(page):

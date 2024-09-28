@@ -49,9 +49,14 @@ a.nav-item-primary {
 }
 
 .carousel {
-  background: #EEE;
+  background: #13171f;
   margin-top: 3rem;
   margin-bottom: 3rem;
+}
+
+.carousel-cell {
+  background: #13171f;
+  width: 100%; /* full width */
 }
 
 .carousel img {
