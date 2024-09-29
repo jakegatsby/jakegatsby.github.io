@@ -1,0 +1,139 @@
+:root {
+  --pico-font-family: Charter, Charter-roboto, Charter-local, Georgia, Times, serif !important;
+  letter-spacing: 0.05em;
+}
+
+html, body {
+  font-size: 100% !important;
+}
+
+#content {
+  margin-bottom: 0px;
+  border-bottom: 1px solid #555;
+}
+
+nav.container, .site-title-container {
+  padding-bottom: 0.5rem;
+}
+
+.site-title-container {
+  text-align: center;
+}
+
+.site-title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin: 0px;
+}
+
+.site-subtitle {
+  font-size: 1.1rem !important;
+  margin: 0px;
+}
+
+
+.site-title-link {
+  text-decoration: none;
+}
+
+nav.container {
+  border-bottom: 1px solid #555;
+}
+
+a.nav-item {
+  font-size: 1.1rem;
+}
+
+a.nav-item-primary {
+  font-weight: 700;
+}
+
+.carousel {
+  background: #13171f;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+.carousel-cell {
+  background: #13171f;
+  width: 100%; /* full width */
+}
+
+.carousel img {
+  display: block;
+  height: 300px;
+}
+
+@media screen and ( min-width: 768px ) {
+  .carousel img {
+    height: 400px;
+  }
+}
+
+.flickity-page-dots .dot {
+  width: 12px;
+  height: 12px;
+  opacity: 1;
+  background: transparent;
+  border: 2px solid white;
+}
+
+.flickity-page-dots .dot.is-selected {
+  background: white;
+}
+
+.page-list-container {
+  margin-bottom: 3rem;
+}
+
+.page-list-preamble {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.page-title-container {
+  text-align: center;
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+}
+
+.page-title, .page-list-link {
+  font-weight: 700;
+}
+
+.page-title {
+  padding: 0px;
+  margin: 0px;
+  text-decoration: none;
+}
+
+.breadcrumb-link {
+  text-decoration: none;
+}
+
+.page-description > p {
+  font-size: 1.5rem;
+  color: #eee;
+}
+
+.artifacts-dropdown-title {
+  text-align: center;
+  font-size: 1.5rem;
+  color: #eee;
+  padding-bottom: 1rem;
+}
+
+.artifact-button {
+  display: block;
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: #eee;
+  margin-bottom: 1rem;
+  width: 100%
+}
+
+span.material-symbols-outlined {
+  vertical-align: bottom;
+  padding-bottom: 0.1em;
+  margin-right: 0.5rem;
+}
