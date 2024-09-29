@@ -47,7 +47,7 @@
     {% endif %}
 
     {% if page | get_images %}
-    <div class="swiffy-slider slider-nav-visible slider-indicators-round slider-nav-animation slider-nav-animation-fadein ">
+    <div class="swiffy-slider slider-nav-visible slider-nav-touch slider-indicators-round slider-nav-animation slider-nav-animation-fadein ">
         <ul class="slider-container">
           {% for image_url in page | get_images %}
              <li><img src="{{ image_url }}" style="max-width: 100%;height: auto;"></li>
