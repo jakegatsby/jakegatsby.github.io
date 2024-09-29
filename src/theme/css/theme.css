@@ -49,25 +49,27 @@ a.nav-item-primary {
 }
 
 .carousel {
-  background: #13171f;
-  margin-top: 3rem;
-  margin-bottom: 3rem;
+  margin-top: 2em;
+  margin-bottom: 4em;
 }
 
 .carousel-cell {
-  background: #13171f;
   width: 100%; /* full width */
+  height: 200px;
+  background: #222;
+  /* center images in cells with flexbox */
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.carousel img {
+.carousel.is-fullscreen .carousel-cell {
+  height: 100%;
+}
+
+.carousel-cell img {
   display: block;
-  height: 300px;
-}
-
-@media screen and ( min-width: 768px ) {
-  .carousel img {
-    height: 400px;
-  }
+  max-height: 100%;
 }
 
 .flickity-page-dots .dot {
@@ -102,8 +104,8 @@ a.nav-item-primary {
 }
 
 .page-title {
+  margin-bottom: 1rem;
   padding: 0px;
-  margin: 0px;
   text-decoration: none;
 }
 

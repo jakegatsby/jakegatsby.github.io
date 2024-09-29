@@ -13,3 +13,21 @@ serve:
 .PHONY: mogrify
 mogrify:
 	find content/displays/ -name *.jpg -exec mogrify -resize 1200x800 -background black -gravity center -extent 1200x800 {} \;
+
+# FIXME - create all
+.PHONY: qr-codes
+qr-codes:
+	qrencode -t svg -l H -o content/displays/dragoons/qr-code.svg https://jakegatsby.github.io/displays/dragoons/
+
+
+.PHONY: clean
+clean:
+	rm ../search ../css/ ../displays/ ../sitemap.xml* -rf
+
+
+.PHONY: build
+build: clean
+	mkdocs build --clean -d public/
+	mv public/* ../
+	rmdir public/
+	rm ../search -rf
