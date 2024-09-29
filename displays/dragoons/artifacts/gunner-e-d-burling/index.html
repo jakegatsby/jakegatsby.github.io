@@ -10,13 +10,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2.0.6/css/pico.min.css" />
 
-  <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css" />
-  <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
-  <link rel="stylesheet" href="https://unpkg.com/flickity-fullscreen@1/fullscreen.css">
-  <script src="https://unpkg.com/flickity-fullscreen@1/fullscreen.js"></script>  
-  <link rel="stylesheet" href="https://unpkg.com/flickity-fade@1/flickity-fade.css">
-  <script src="https://unpkg.com/flickity-fade@1/flickity-fade.js"></script>
-
+  <script src="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/js/swiffy-slider.min.js" crossorigin="anonymous" defer></script>
+  <link href="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/css/swiffy-slider.min.css" rel="stylesheet" crossorigin="anonymous">
+  
   <link rel="stylesheet" href="../../../../css/theme.css">
 </head>
 
@@ -39,14 +35,25 @@
     
 
     
-    <div class="carousel" data-flickity='{ "imagesLoaded": true, "percentPosition": false, "wrapAround": true, "pageDots": true, "prevNextButtons": true, "fullscreen": true, "fade": true }'>
-    
-      <img src="burling-medal.jpg"></img>
-    
-      <img src="burling-silhouette.jpg"></img>
-    
+    <div class="swiffy-slider slider-nav-visible slider-indicators-round slider-nav-animation slider-nav-animation-fadein ">
+        <ul class="slider-container">
+          
+             <li><img src="burling-medal.jpg" style="max-width: 100%;height: auto;"></li>
+          
+             <li><img src="burling-silhouette.jpg" style="max-width: 100%;height: auto;"></li>
+          
+        </ul>
+
+        <button type="button" class="slider-nav"></button>
+        <button type="button" class="slider-nav slider-nav-next"></button>
+
+        <div class="slider-indicators">
+            <button class="active"></button>
+            <button></button>
+            <button></button>
+        </div>
     </div>
-    
+        
 
     <div class="page-description">
     
@@ -58,5 +65,6 @@
     </div>
     
   </main>
+
 </body>
 </html
