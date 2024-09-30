@@ -42,13 +42,14 @@
    
     {% if page | get_images %}
     <!-- CAROUSEL -->
-    <div class="swiffy-slider slider-nav-visible slider-nav-touch slider-indicators-round slider-nav-animation slider-nav-animation-fadein ">
+    <div class="swiffy-slider {{ 'slider-nav-visible slider-nav-touch slider-indicators-round' if (page | get_images | length > 1) else '' }} slider-nav-animation slider-nav-animation-fadein ">
         <ul class="slider-container">
           {% for image_url in page | get_images %}
              <li><img src="{{ image_url }}" style="max-width: 100%;height: auto;"></li>
           {% endfor %}
         </ul>
 
+    {% if (page | get_images | length > 1) %}
         <button type="button" class="slider-nav"></button>
         <button type="button" class="slider-nav slider-nav-next"></button>
 
@@ -57,6 +58,7 @@
             <button></button>
             <button></button>
         </div>
+    {% endif %}
     </div>
     {% endif %}    
     <!-- END-CAROUSEL -->
