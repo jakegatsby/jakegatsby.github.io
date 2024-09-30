@@ -20,23 +20,23 @@
   <main id="content" class="container">
 
     {% if page | is_display %}
-    <div class="page-title-container">
       <h2 class="page-title">{{ page.meta.title }}</h2>
-    </div>
 
-    <details>
-      <summary class="artifacts-dropdown-title">Artifacts ☰</summary>
+    <!-- ARTIFACTS DROPDOWN -->
+    <details class="dropdown">
+      <summary>Artifacts</summary>
+      <ul>
       {% for artifact in page | get_artifacts %}
-      <div><a href="{{ artifact.url }}" class="artifact-button" role="button">{{ artifact.title }}</a></div>
+        <li><a href="{{ artifact.url }}">{{ artifact.title }}</a></li>
       {% endfor %}
+      </ul>
     </details>
-
     {% endif %}
 
     {% if page | is_artifact %}
     <div class="page-title-container">      
       <h2 class="page-title">{{ page.meta.title }}</h2>
-      <h5 class="page-title"><a class="breadcrumb-link" href="{{ (page | get_display).url }}">{{ (page | get_display).title }}</a></h5>
+      <h5 class="page-title"><a href="{{ (page | get_display).url }}">{{ (page | get_display).title }}</a></h5>
     </div>
     {% endif %}
 
@@ -46,6 +46,7 @@
       </div>
     {% endif %}
 
+    <!-- CAROUSEL -->
     {% if page | get_images %}
     <div class="swiffy-slider slider-nav-visible slider-nav-touch slider-indicators-round slider-nav-animation slider-nav-animation-fadein ">
         <ul class="slider-container">
