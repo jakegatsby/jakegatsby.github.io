@@ -24,10 +24,10 @@
     {% if page | is_display %}
     <!-- ARTIFACTS DROPDOWN -->
     <details class="dropdown artifacts-dropdown">
-      <summary>Artifacts</summary>
+      <summary role="button" class="secondary outline">Artifacts</summary>
       <ul>
       {% for artifact in page | get_artifacts %}
-        <li><a href="{{ artifact.url }}">{{ artifact.title }}</a></li>
+        <li><a href="{{ artifact.url }}" class="artifact-link">{{ artifact.title }}</a></li>
       {% endfor %}
       </ul>
     </details>

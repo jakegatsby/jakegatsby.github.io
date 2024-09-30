@@ -6,6 +6,6 @@ Gunner E.D. Burling was an original member of the 99th Winnipeg Field Battery.  
 
 Members of the North West Mounted Police (NWMP) who helped suppress the rebellion were only later included and were awarded the medal and a $300.00 grant.
 
-In 1886 a bar with the word “Saskatchewan” on it was awarded to anyone who took part in any of the main encounters which took place along the Saskatchewan River at Fish Creek, Batoche, Cut Knife and Frenchman’s Butte
+In 1886 a bar with the word "Saskatchewan" on it was awarded to anyone who took part in any of the main encounters which took place along the Saskatchewan River at Fish Creek, Batoche, Cut Knife and Frenchman’s Butte.
 
 The 99th Winnipeg Field Battery of which Gunner Burling was a member became the 13th Field Battery and is now part of the 26th Field Regiment Royal Canadian Artillery. 13th Battery is currently located in Portage la Prairie and is the oldest artillery battery in western Canada.
