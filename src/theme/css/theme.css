@@ -2,14 +2,23 @@
   letter-spacing: 0.05em;
 }
 
-.swiffy-slider {
-  margin-top: 2rem;
+.page-title {
+  text-align: center;
+  margin-top: 1rem;
   margin-bottom: 4rem;
 }
 
+.artifacts-dropdown {
+  margin-bottom: 4rem;
+}
 
-.page-title {
-  text-align: center;
+.audio-controls {
+  margin-bottom: 4rem;
+}
+
+.swiffy-slider {
+  margin-top: 2rem;
+  margin-bottom: 4rem;
 }
 
 .page-description > p {
