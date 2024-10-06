@@ -5,15 +5,13 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>XII Manitoba Dragoons and 26 Field Regiment Museum</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2.0.6/css/pico.min.css" />
 
-  <script src="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/js/swiffy-slider.min.js" crossorigin="anonymous" defer></script>
-  <link href="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/css/swiffy-slider.min.css" rel="stylesheet" crossorigin="anonymous">
+  <link rel="stylesheet" href="{{ "css/pico.min.css"|url }}" />
+
+  <script src="{{ 'js/swiffy-slider.min.js' | url }}"></script>
+  <link rel="stylesheet" href="{{ 'css/swiffy-slider.min.css' | url }}">
   
-  <link rel="stylesheet" href="{{ "css/theme.css"|url }}">
+  <link rel="stylesheet" href="{{ 'css/theme.css' | url }}">
 </head>
 
 <body>
@@ -67,7 +65,7 @@
     {% block content %}
     {{ page.content }}
     {% endblock %}
-    </div>              
+    </div>
     
   </main>
 
