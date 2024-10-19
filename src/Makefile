@@ -22,7 +22,7 @@ qr-codes:
 
 .PHONY: clean
 clean:
-	rm ../search ../css/ ../displays/ ../sitemap.xml* -rf
+	rm ../css ../displays ../js ../search ../sitemap.xml ../sitemap.xml.gz -rf
 
 
 .PHONY: build
